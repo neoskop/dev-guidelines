@@ -28,7 +28,7 @@
     
     - Use [TSLint](https://palantir.github.io/tslint/) as the linting tool for TypeScript.
     - Use [codelyzer](https://github.com/mgechev/codelyzer) in your Angular projects.
-    - Our default configuration: [tslint.json](blob/master/configs/tslint.json)
+    - Our default configuration: [tslint.json](configs/tslint.json)
     
   - **CSS**
       
@@ -45,7 +45,7 @@
   - **JavaScript / TypeScript**
   
     - Use [Prettier](https://prettier.io/) to format your JavaScript/TypeScript code.
-    - Our default configuration: [.prettierrc](blob/master/configs/.editorconfig)
+    - Our default configuration: [.prettierrc](configs/.editorconfig)
     - **Do** use the `--single-quote` option.
     - You **may** overwrite the `--print-width <int>` option.
     - **Do not** overwrite other options.
@@ -65,7 +65,15 @@
 **[⬆ back to top](#table-of-contents)**
 
 ## Build Tools
-
+    
+  - **JavaScript / TypeScript (Frontend)**
+  
+    - We prefer [Yarn](https://yarnpkg.com/en/) as our package manager, due to its speed and "workspaces" feature used 
+    in our mono repos.
+    - We use [Webpack](https://webpack.js.org/) as our code bundler.
+    - For more advances build steps that are not easily achieved with Webpack, we use **NPM scripts**. You may consider
+    [Jake](http://jakejs.com/) for *really* complex build steps.
+    
 **[⬆ back to top](#table-of-contents)**
 
 ## Preferred Libraries / Frameworks
