@@ -1,0 +1,14 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "member-access": false,
+    "no-inferrable-types": [true, "ignore-params"],
+    "no-string-literal": false,
+    "no-string-throw": true,
+    "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
+    "object-literal-sort-keys": false,
+    "quotemark": [true, "single"],
+    "variable-name": false
+  }
+}
