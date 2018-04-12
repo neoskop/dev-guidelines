@@ -11,9 +11,10 @@
 
   1. [Linting](#linting)
   1. [Formatting](#formatting)
-  1. [Build Tools](#build-tools)
-  1. [Preferred Libraries / Frameworks](#libraries)
+  1. [Build Tools / Infrastructure](#build-tools)
   1. [Testing](#testing)
+  1. [Deployment](#deployment)
+  1. [Versioning](#versioning)
 
 ## Linting
 
@@ -64,7 +65,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## Build Tools
+## Build Tools / Infrastructure
     
   - **JavaScript / TypeScript (Frontend)**
   
@@ -73,11 +74,25 @@
     - We use [Webpack](https://webpack.js.org/) as our code bundler.
     - For more advances build steps that are not easily achieved with Webpack, we use **NPM scripts**. You may consider
     [Jake](http://jakejs.com/) for *really* complex build steps.
+    - Use [Snyk](https://snyk.io/) to monitor your dependencies for vulnerabilities.
     
-**[⬆ back to top](#table-of-contents)**
-
-## Preferred Libraries / Frameworks
-
+  - **Angular**
+  
+    - Use the [Angular CLI](https://cli.angular.io/) to bootstrap new projects.
+    - You may eject the project, if you need to customize the Webpack configuration.
+    - Consider [nrwl/nx](https://github.com/nrwl/nx) for large scale applications.
+    
+  - **React**
+  
+    - Use [create-react-app](https://github.com/facebook/create-react-app) to bootstrap new projects.
+    - You may eject the project, if you need to customize the Webpack configuration.
+    
+  - **Styles**
+    - We use [PostCSS](http://postcss.org/) for CSS transformations.
+    - Use [cssnext](http://cssnext.io/) or [LibSass](https://sass-lang.com/libsass) for advanced css features.
+    - Consider using [styled-components](https://github.com/styled-components/styled-components) for your React
+    component styles.
+    
 **[⬆ back to top](#table-of-contents)**
 
 ## Testing
@@ -86,6 +101,18 @@
   - Strive for a good amount of test coverage.
   - Fixed a bug? Write a regression test to prevent it from breaking again.
   - Use [Testcafe](https://devexpress.github.io/testcafe/) for your E2E tests.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Deployment
+
+  - tbd.
+
+**[⬆ back to top](#table-of-contents)**
+
+## Versioning
+
+  - tbd.
 
 **[⬆ back to top](#table-of-contents)**
 
