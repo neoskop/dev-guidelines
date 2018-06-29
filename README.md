@@ -3,7 +3,7 @@
 _A collection of guidelines, best practices and tools used in development at
 [Neoskop](https://www.neoskop.de)._
 
-> **Note**: This repository serves as a living document, representing our development workflow.
+> **Note**: This repository serves as a living document, representing essential guidelines concerning our development workflow.
 > _Please use pull requests to keep this document up to date and challenge outdated or obsolete
 > contents whenever you see fit._
 
@@ -76,7 +76,7 @@ We make sure our code gets formatted before committing changes to a repository.
   - Feel free to evaluate possible options.
 
 - **CSS**
-  - see [1.3 Linting CSS](#linting--css)
+  - see [1.3 Linting CSS](#linting)
 
 **[⬆ back to top](#table-of-contents)**
 
