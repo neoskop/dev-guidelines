@@ -28,23 +28,27 @@ _A collection of guidelines, best practices and tools used in development at
   - value comprehensibility and ease of maintenance over writing "clever code".
   - do not focus on perfect code, but code that strikes the best balance of **value for our time**.
 
-- This attitude may not be appropriate for open-source projects, but it is definitely appropriate for projects where cost and schedule are key factors.
+This attitude may not be appropriate for open-source projects, but it is definitely
+appropriate for projects where cost and schedule are key factors.
 
 ## Linting
 
-We make sure to always lint our code before committing stuff to a repository.
+We make sure to always lint our code before committing stuff to a repository. The sample
+configuration files in this repository could be taken as a fair starting point. Many rules
+are certainly a matter of taste, so feel free to adjust. Just make sure to include linting
+files in your repositories, so other developers can use it, when jumping in your code.
 
 - **JavaScript**
 
   - We consider TypeScript, if possible ;)
   - We use [ESLint](https://eslint.org/) as the linting tool for JavaScript and JSX.
-  - Our default configuration: [eslint.json](configs/eslint.json).
+  - Here is a possible configuration: [eslint.json](configs/eslint.json)
 
 - **TypeScript**
 
   - We use [TSLint](https://palantir.github.io/tslint/) as the linting tool for TypeScript.
   - We use [codelyzer](https://github.com/mgechev/codelyzer) in our Angular projects.
-  - Our default configuration: [tslint.json](configs/tslint.json)
+  - Here is a possible configuration: [tslint.json](configs/tslint.json)
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
