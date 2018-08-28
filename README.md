@@ -18,29 +18,25 @@ _A collection of guidelines, best practices and tools used in development at
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Versioning](#versioning)
-  - [Roadmap / TODO](#roadmap--todo)
+  - [Checklist](#checklist)
 
 ## General Thoughts
 
 - When writing code we …
 
-  - focus on code that does what it is supposed to do.
+  - focus on code that gets the job done.
   - value comprehensibility and ease of maintenance over writing "clever code".
   - do not focus on perfect code, but code that strikes the best balance of **value for our time**.
-
-This attitude may not be appropriate for open-source projects, but it is definitely
-appropriate for projects where cost and schedule are key factors.
 
 ## Linting
 
 We make sure to always lint our code before committing stuff to a repository. The sample
 configuration files in this repository could be taken as a fair starting point. Many rules
 are certainly a matter of taste, so feel free to adjust. Just make sure to include linting
-files in your repositories, so other developers can use it, when jumping in your code.
+files in your repositories, so other developers can use it when jumping in your code.
 
 - **JavaScript**
 
-  - We consider TypeScript, if possible ;)
   - We use [ESLint](https://eslint.org/) as the linting tool for JavaScript and JSX.
   - Here is a possible configuration: [eslint.json](configs/eslint.json)
 
@@ -52,7 +48,7 @@ files in your repositories, so other developers can use it, when jumping in your
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
-  - Our default configuration: tbd.
+  - Here is a possible configuration: [.stylelintrc.json](configs/.stylelintrc.json)
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -140,7 +136,30 @@ We make sure our code gets formatted before committing changes to a repository.
 
 **[⬆ back to top](#table-of-contents)**
 
-## Roadmap / TODO
+## Checklist
 
-- optimize default configurations
-- add examples for tool integration (IDEs, Plugins, Commit Hooks, ...)
+- Linting
+  - [ ] Are linting configuration files available and under version control?
+    - [ ] JavaScript: eslint.json
+    - [ ] TypeScript: tslint.json
+    - [ ] Stylesheets: .stylelintrc
+  - [ ] Is linting configured with your IDE?
+- Formatting
+  - [ ] Is a Prettier configuration file available and under version control?
+  - [ ] Is Prettier configured with your IDE?
+- Build Tools / Libraries
+  - [ ] Are you using Yarn as the package manager?
+  - [ ] Are you using Webpack for bundling?
+  - [ ] Are you using PostCSS with postcss-preset-env or LibSass for CSS transformations?
+- [ ] Testing
+  - [ ] Did you configure automatic unit and e2e test suites?
+- [ ] Deployment
+  - [ ] Are there working Docker files to run the application on server and locally?
+  - [ ] Are Buddy build and deployment tasks available?
+  - [ ] Have tests been integrated with Buddy?
+- [ ] Versioning
+  - [ ] Is there a .gitignore excluding all neccessary files?
+  - [ ] Did you make sure NOT to commit sensitive data?
+  - [ ] Did you enforce semantic commit messages through commit hooks or the like?
+
+**[⬆ back to top](#table-of-contents)**
