@@ -149,6 +149,7 @@ We make sure our code gets formatted before committing changes to a repository.
   - [ ] Is Prettier configured with your IDE?
 - **Build Tools / Libraries**
   - [ ] Are you using Yarn as the package manager?
+    - [ ] Is the yarn.lock file under version control?
   - [ ] Are you using Webpack for bundling?
   - [ ] Are you using PostCSS with postcss-preset-env or LibSass for CSS transformations?
 - [ ] **Testing**
