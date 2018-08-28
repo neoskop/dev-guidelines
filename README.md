@@ -48,7 +48,7 @@ files in your repositories, so other developers can use it when jumping in your 
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
-  - Here is a possible configuration: [.stylelintrc.json](configs/.stylelintrc.json)
+  - Here is a possible configuration: [.stylelintrc.json](configs/.stylelintrc)
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -138,26 +138,26 @@ We make sure our code gets formatted before committing changes to a repository.
 
 ## Checklist
 
-- Linting
+- **Linting**
   - [ ] Are linting configuration files available and under version control?
     - [ ] JavaScript: eslint.json
     - [ ] TypeScript: tslint.json
     - [ ] Stylesheets: .stylelintrc
   - [ ] Is linting configured with your IDE?
-- Formatting
+- **Formatting**
   - [ ] Is a Prettier configuration file available and under version control?
   - [ ] Is Prettier configured with your IDE?
-- Build Tools / Libraries
+- **Build Tools / Libraries**
   - [ ] Are you using Yarn as the package manager?
   - [ ] Are you using Webpack for bundling?
   - [ ] Are you using PostCSS with postcss-preset-env or LibSass for CSS transformations?
-- [ ] Testing
+- [ ] **Testing**
   - [ ] Did you configure automatic unit and e2e test suites?
-- [ ] Deployment
+- [ ] **Deployment**
   - [ ] Are there working Docker files to run the application on server and locally?
   - [ ] Are Buddy build and deployment tasks available?
   - [ ] Have tests been integrated with Buddy?
-- [ ] Versioning
+- [ ] **Versioning**
   - [ ] Is there a .gitignore excluding all neccessary files?
   - [ ] Did you make sure NOT to commit sensitive data?
   - [ ] Did you enforce semantic commit messages through commit hooks or the like?
