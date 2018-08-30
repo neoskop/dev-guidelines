@@ -18,6 +18,7 @@ _A collection of guidelines, best practices and tools used in development at
   - [Testing](#testing)
   - [Deployment](#deployment)
   - [Versioning](#versioning)
+  - [Documentation](#documentation)
   - [Checklist](#checklist)
 
 ## General Thoughts
@@ -84,7 +85,7 @@ We make sure our code gets formatted before committing changes to a repository.
 
 - **JavaScript / TypeScript**
 
-  - We prefer [Yarn](https://yarnpkg.com/en/) as our package manager, due to its speed and "workspaces" feature used in our mono repos.
+  - We prefer [Yarn](https://yarnpkg.com/en/) as our package manager, due to its speed and "workspaces" feature used in our mono repos. We only use exact version numbers in our **package.json** (no ~ or ^).
   - We use [Webpack](https://webpack.js.org/) as our code bundler.
   - For more advanced build steps we use **NPM scripts**. You may consider [Jake](http://jakejs.com/) for _really_ complex build steps.
   - We use **npm audit** to monitor our dependencies for vulnerabilities in projects using NPM >= 6. Otherwise we use [Snyk](https://snyk.io/).
@@ -99,7 +100,7 @@ We make sure our code gets formatted before committing changes to a repository.
 
   - We use [create-react-app](https://github.com/facebook/create-react-app) to bootstrap new projects.
   - You may eject the project, if you need to customize the Webpack configuration.
-  - [Next.js](https://github.com/zeit/next.js/) is our go-to-library for static site generation with React.
+  - We are currently evaluating [Next.js](https://github.com/zeit/next.js/) and [react-static](https://github.com/nozzle/react-static) as our go-to-library for static site generation with React.
 
 - **Styles**
 
@@ -122,6 +123,7 @@ We make sure our code gets formatted before committing changes to a repository.
 ## Deployment
 
 - We use [Docker](https://www.docker.com) to build and ship our applications.
+- We deliver a **docker-compose.yml** file for multi-container applications.
 - We use [Buddy](https://app.buddy.works/) to manage our deployment pipelines. Integrate your tests with Buddy whenever possible to prevent corrupt deployments.
 
 **[⬆ back to top](#table-of-contents)**
@@ -133,6 +135,14 @@ We make sure our code gets formatted before committing changes to a repository.
 - We use Karma's best practices for [semantic commit messages](http://karma-runner.github.io/2.0/dev/git-commit-msg.html). It makes scanning the log easier and allows for an easier generation of changelogs.
 - You may write commit messages in **German or English**, just be consistent throughout your projects.
 - Feel free to evaluate tools for optimized Git workflows, e.g. [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/).
+
+**[⬆ back to top](#table-of-contents)**
+
+## Documentation
+
+- We write README files for all our projects.
+- Every developer should be able to run the application following the instructions in the README file.
+- Stick to easy step by step instructions and do not make assumptions about the user's foreknowledge.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -150,6 +160,7 @@ We make sure our code gets formatted before committing changes to a repository.
 - **Build Tools / Libraries**
   - [ ] Are you using Yarn as the package manager?
     - [ ] Is the yarn.lock file under version control?
+    - [ ] Are dependencies defined using exact version numbers (no ^ or ~ in version numbers)?
   - [ ] Are you using Webpack for bundling?
   - [ ] Are you using PostCSS with postcss-preset-env or LibSass for CSS transformations?
 - [ ] **Testing**
@@ -162,5 +173,7 @@ We make sure our code gets formatted before committing changes to a repository.
   - [ ] Is there a .gitignore excluding all neccessary files?
   - [ ] Did you make sure NOT to commit sensitive data?
   - [ ] Did you enforce semantic commit messages through commit hooks or the like?
+- [ ] **Documentation**
+  - [ ] Did you write a README.md containing step by step instructions to run the application?
 
 **[⬆ back to top](#table-of-contents)**
