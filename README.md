@@ -122,9 +122,12 @@ We make sure our code gets formatted before committing changes to a repository.
 
 ## Deployment
 
-- We use [Docker](https://www.docker.com) to build and ship our applications.
-- We deliver a **docker-compose.yml** file for multi-container applications.
-- We use [Buddy](https://app.buddy.works/) to manage our deployment pipelines. Integrate your tests with Buddy whenever possible to prevent corrupt deployments.
+- We use [Docker](https://www.docker.com) to build and ship our applications and deploy our applications to [Kubernetes](https://www.kubernetes.io).
+  - We deliver a **Dockerfile** as well as a **docker-compose.yml** file for multi-container applications that is ready for use in development.
+  - We commit the Kubernetes manifests we use to the same repository as the application's code.
+  - To ensure that our applications keep running and don't impact others in the same cluster, our manifests include [Readiness and Liveness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) as well as [Resource requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/)
+  - We realize that containerizing an application is no silver bullet against security threats and thus use the [CIS Docker CE Benchmark v1.1.0](https://www.cisecurity.org/benchmark/docker/) / [Docker Bench for Security](https://github.com/docker/docker-bench-security) to audit our images and containers
+- We use [Buddy](https://app.buddy.works/) for continuous integration and continuous delivery. Integrate your tests with Buddy whenever possible to prevent corrupt deployments.
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -167,6 +170,7 @@ We make sure our code gets formatted before committing changes to a repository.
   - [ ] Did you configure automatic unit and e2e test suites?
 - [ ] **Deployment**
   - [ ] Are there working Docker files to run the application on server and locally?
+  - [ ] Do the sources include recent and valid Kubernetes manifests to re-deploy the application from scratch?
   - [ ] Are Buddy build and deployment tasks available?
   - [ ] Have tests been integrated with Buddy?
 - [ ] **Versioning**
