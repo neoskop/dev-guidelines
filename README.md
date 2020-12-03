@@ -43,9 +43,9 @@ files in your repositories, so other developers can use it when jumping in your 
 
 - **TypeScript**
 
-  - We use [TSLint](https://palantir.github.io/tslint/) as the linting tool for TypeScript.
+  - We use [ESLint](https://eslint.org/) as the linting tool for TypeScript and TSX.
   - We use [codelyzer](https://github.com/mgechev/codelyzer) in our Angular projects.
-  - Here is a possible configuration: [tslint.json](configs/tslint.json)
+  - Here is a possible configuration: [.eslintrc](configs/.eslintrc)
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
@@ -85,7 +85,8 @@ We make sure our code gets formatted before committing changes to a repository.
 
 - **JavaScript / TypeScript**
 
-  - We prefer [Yarn](https://yarnpkg.com/en/) as our package manager, due to its speed and "workspaces" feature used in our mono repos. We only use exact version numbers in our **package.json** (no ~ or ^).
+  - We test which package manager is currently the best, [Yarn](https://yarnpkg.com/en/) or [Npm](https://npmjs.com/), we found out that yarn is slower and npm now also enables "workspaces" used in our mono repos.
+  - We only use exact version numbers in our **package.json** (no ~ or ^) use `npm config set save-prefix ' '`
   - We use [Webpack](https://webpack.js.org/) as our code bundler.
   - For more advanced build steps we use **NPM scripts**. You may consider [Jake](http://jakejs.com/) for _really_ complex build steps.
   - We use **npm audit** to monitor our dependencies for vulnerabilities in projects using NPM >= 6. Otherwise we use [Snyk](https://snyk.io/).
@@ -100,7 +101,7 @@ We make sure our code gets formatted before committing changes to a repository.
 
   - We use [create-react-app](https://github.com/facebook/create-react-app) to bootstrap new projects.
   - You may eject the project, if you need to customize the Webpack configuration.
-  - We are currently evaluating [Next.js](https://github.com/zeit/next.js/) and [react-static](https://github.com/nozzle/react-static) as our go-to-library for static site generation with React.
+  - We are currently evaluating [Gatsby](https://github.com/gatsbyjs/gatsby) as our go-to-library for static site generation with React.
 
 - **Styles**
 
