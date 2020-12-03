@@ -43,9 +43,9 @@ files in your repositories, so other developers can use it when jumping in your 
 
 - **TypeScript**
 
-  - We use [TSLint](https://palantir.github.io/tslint/) as the linting tool for TypeScript.
+  - We use [ESLint](https://eslint.org/) as the linting tool for TypeScript and TSX.
   - We use [codelyzer](https://github.com/mgechev/codelyzer) in our Angular projects.
-  - Here is a possible configuration: [tslint.json](configs/tslint.json)
+  - Here is a possible configuration: [eslint.json](configs/eslint.json)
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
@@ -100,7 +100,7 @@ We make sure our code gets formatted before committing changes to a repository.
 
   - We use [create-react-app](https://github.com/facebook/create-react-app) to bootstrap new projects.
   - You may eject the project, if you need to customize the Webpack configuration.
-  - We are currently evaluating [Next.js](https://github.com/zeit/next.js/) and [react-static](https://github.com/nozzle/react-static) as our go-to-library for static site generation with React.
+  - We are currently evaluating [Gatsby](https://github.com/gatsbyjs/gatsby) as our go-to-library for static site generation with React.
 
 - **Styles**
 
