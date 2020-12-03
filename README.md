@@ -45,7 +45,7 @@ files in your repositories, so other developers can use it when jumping in your 
 
   - We use [ESLint](https://eslint.org/) as the linting tool for TypeScript and TSX.
   - We use [codelyzer](https://github.com/mgechev/codelyzer) in our Angular projects.
-  - Here is a possible configuration: [eslint.json](configs/eslint.json)
+  - Here is a possible configuration: [.eslintrc](configs/.eslintrc)
 
 - **CSS**
   - We use [stylelint](https://stylelint.io/) as the linting tool for our stylesheets.
