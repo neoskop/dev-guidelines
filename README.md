@@ -85,7 +85,8 @@ We make sure our code gets formatted before committing changes to a repository.
 
 - **JavaScript / TypeScript**
 
-  - We prefer [Yarn](https://yarnpkg.com/en/) as our package manager, due to its speed and "workspaces" feature used in our mono repos. We only use exact version numbers in our **package.json** (no ~ or ^).
+  - We test which package manager is currently the best, [Yarn](https://yarnpkg.com/en/) or [Npm](https://npmjs.com/), we found out that yarn is slower and npm now also enables "workspaces" used in our mono repos.
+  - We only use exact version numbers in our **package.json** (no ~ or ^) use `npm config set save-prefix ' '`
   - We use [Webpack](https://webpack.js.org/) as our code bundler.
   - For more advanced build steps we use **NPM scripts**. You may consider [Jake](http://jakejs.com/) for _really_ complex build steps.
   - We use **npm audit** to monitor our dependencies for vulnerabilities in projects using NPM >= 6. Otherwise we use [Snyk](https://snyk.io/).
